@@ -12,8 +12,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-    - name: Create missing directory
-      run: mkdir -p /home/runner/work/s3-actions/s3-actions/dirname
+    - name: Upload to S3
+      uses: shallwefootball/s3-upload-action@master
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
